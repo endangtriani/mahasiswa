@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <title>Input Data Mahasiswa</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Input Data Siswa</h2>
+        <form method="POST" action="{{ url_for('insert') }}" class="form-group row">
+            <div class="form-group">
+                <label for="" class="col-sm-2 col-form-label">NIM: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="nim" id="" class="form-control" placeholder="Input NIM">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 col-form-label">Name: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="nama" id="" class="form-control" placeholder="Input Nama">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-sm-2 col-form-label">Jurusan: </label>
+                <div class="col-sm-10">
+                    <select name="jurusan" id="" class="form-control">
+                        <option value="TI">TI</option>
+                        <option value="SI">SI</option>
+                        <option value="Management">Management</option>
+                        <option value="Akuntansi">Akuntansi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-sm-2">Alamat: </label>
+                <div class="col-sm-10">
+                    <textarea name="alamat" id="" cols="30" rows="5" class="form-control" style="resize: none;"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-sm-2">Telepon: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="tlp" id="" class="form-control" placeholder="Input Telepon">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset col-m-2">
+                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                    <button type="reset" class="btn btn-warning btn-sm">Reset</button>
+
+                </div>
+                <!-- <input type="submit" value="submit" name="submit" class="form-control"> -->
+                
+            </div>
+        
+        </form>
+    </div>
+</body>
+</html>

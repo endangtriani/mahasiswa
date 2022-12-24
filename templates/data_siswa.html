@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+    <title>Data Siswa</title>
+</head>
+<body>
+    <div class="container">
+        
+        <table class="table table-striped custab" style="margin-top: 2%;">
+            <a href="{{ url_for('template_add') }}"><button type="submit" class="btn btn-primary btn-m" style="margin-top: 2%;">Tambah</button></a>
+            <tr>
+                <th>NIM</th>
+                <th>Nama Siswa</th>
+                <th>Jurusan Siswa</th>
+                <th>Alamat Siswa</th>
+                <th>Telepon Siswa</th>
+                <th class="text-center">Action</th>
+            </tr>
+        {% for item in value %}
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                <td class="text-center">
+                    <a href="/edit/{{item[0]}}"><button type="button" class="btn btn-warning btn-sm">Edit</button></a>
+                    <a href="/delete/{{item[0]}}"><button type="button" class="btn btn-danger btn-sm" onclick="return confirm('Apakah kamu ingi menghapus data ini?')">Delete</button></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
